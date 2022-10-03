@@ -7,11 +7,11 @@
         "subtitleFontStyle":"italic",
         "subtitleFontSize":10,
         "anchor": "start",
-        "color": "whitesmoke",
-        "subtitleColor": "whitesmoke"},
+        "color": "black",
+        "subtitleColor": "black"},
   
     "config": {
-      "background":"#122b39",
+      "background":"#ffffff",
       "view": {"stroke": "transparent"}},
     
       "data": {
@@ -39,9 +39,9 @@
                   "grid": false,
                   "labelSeparation": 10,
                   "domainColor":"dimgrey",
-                  "labelColor":"whitesmoke",
+                  "labelColor":"black",
                   "tickColor":"pink",
-                  "gridColor":"dimgrey"}},
+                  "gridColor":"white"}},
       
             "y": {
                 "field": {"repeat": "layer"},
@@ -51,17 +51,17 @@
                   "title": null,
                   "grid": false,
                   "labelSeparation": 10,
-                  "domainColor":"dimgrey",
-                  "labelColor":"whitesmoke",
+                  "domainColor":"black",
+                  "labelColor":"black",
                   "tickColor":"pink",
-                  "gridColor":"dimgrey"},
+                  "gridColor":"white"},
                 "title": null},
     
             "color": {
                 "datum": {"repeat": "layer"},
                 "legend":{
                   "orient": "top-left",
-                  "labelColor":"whitesmoke"},
+                  "labelColor":"black"},
                 "scale": {"scheme": "set1"}}
           } 
       }
