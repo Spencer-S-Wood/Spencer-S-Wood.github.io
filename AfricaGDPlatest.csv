@@ -36,7 +36,7 @@ Barbados,BRB,GDP per capita (current US$),NY.GDP.PCAP.CD,17033.93719
 Brunei Darussalam,BRN,GDP per capita (current US$),NY.GDP.PCAP.CD,31722.66014
 Bhutan,BTN,GDP per capita (current US$),NY.GDP.PCAP.CD,
 Botswana,BWA,GDP per capita (current US$),NY.GDP.PCAP.CD,7347.552382
-Central African Republic,CAF,GDP per capita (current US$),NY.GDP.PCAP.CD,511.4847456
+Central African Rep.,CAF,GDP per capita (current US$),NY.GDP.PCAP.CD,511.4847456
 Canada,CAN,GDP per capita (current US$),NY.GDP.PCAP.CD,52051.35146
 Central Europe and the Baltics,CEB,GDP per capita (current US$),NY.GDP.PCAP.CD,18568.99338
 Switzerland,CHE,GDP per capita (current US$),NY.GDP.PCAP.CD,93457.4404
@@ -45,7 +45,7 @@ Chile,CHL,GDP per capita (current US$),NY.GDP.PCAP.CD,16502.83857
 China,CHN,GDP per capita (current US$),NY.GDP.PCAP.CD,12556.33312
 Cote d'Ivoire,CIV,GDP per capita (current US$),NY.GDP.PCAP.CD,2578.760412
 Cameroon,CMR,GDP per capita (current US$),NY.GDP.PCAP.CD,1661.702105
-"Congo, Dem. Rep.",COD,GDP per capita (current US$),NY.GDP.PCAP.CD,584.1064092
+Dem. Rep. Congo,COD,GDP per capita (current US$),NY.GDP.PCAP.CD,584.1064092
 "Congo, Rep.",COG,GDP per capita (current US$),NY.GDP.PCAP.CD,2213.880863
 Colombia,COL,GDP per capita (current US$),NY.GDP.PCAP.CD,6131.225922
 Comoros,COM,GDP per capita (current US$),NY.GDP.PCAP.CD,1494.687693
@@ -90,7 +90,7 @@ Gibraltar,GIB,GDP per capita (current US$),NY.GDP.PCAP.CD,
 Guinea,GIN,GDP per capita (current US$),NY.GDP.PCAP.CD,1174.352972
 "Gambia, The",GMB,GDP per capita (current US$),NY.GDP.PCAP.CD,835.5944214
 Guinea-Bissau,GNB,GDP per capita (current US$),NY.GDP.PCAP.CD,812.962373
-Equatorial Guinea,GNQ,GDP per capita (current US$),NY.GDP.PCAP.CD,8462.28633
+Eq. Guinea,GNQ,GDP per capita (current US$),NY.GDP.PCAP.CD,8462.28633
 Greece,GRC,GDP per capita (current US$),NY.GDP.PCAP.CD,20276.54467
 Grenada,GRD,GDP per capita (current US$),NY.GDP.PCAP.CD,9928.621733
 Greenland,GRL,GDP per capita (current US$),NY.GDP.PCAP.CD,
@@ -215,10 +215,10 @@ Solomon Islands,SLB,GDP per capita (current US$),NY.GDP.PCAP.CD,2336.968134
 Sierra Leone,SLE,GDP per capita (current US$),NY.GDP.PCAP.CD,515.9320918
 El Salvador,SLV,GDP per capita (current US$),NY.GDP.PCAP.CD,4408.520365
 San Marino,SMR,GDP per capita (current US$),NY.GDP.PCAP.CD,
-Somalia,SOM,GDP per capita (current US$),NY.GDP.PCAP.CD,445.7790165
+Somaliland,SOM,GDP per capita (current US$),NY.GDP.PCAP.CD,445.7790165
 Serbia,SRB,GDP per capita (current US$),NY.GDP.PCAP.CD,9214.993546
 Sub-Saharan Africa (excluding high income),SSA,GDP per capita (current US$),NY.GDP.PCAP.CD,1644.480362
-South Sudan,SSD,GDP per capita (current US$),NY.GDP.PCAP.CD,
+S. Sudan,SSD,GDP per capita (current US$),NY.GDP.PCAP.CD,
 Sub-Saharan Africa,SSF,GDP per capita (current US$),NY.GDP.PCAP.CD,1645.472944
 Small states,SST,GDP per capita (current US$),NY.GDP.PCAP.CD,12394.92591
 Sao Tome and Principe,STP,GDP per capita (current US$),NY.GDP.PCAP.CD,2449.333442
