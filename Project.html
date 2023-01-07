@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spencer Wood</title>
+
+    <link rel="stylesheet" href= "Project.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+
+        <!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    
+    <!--Favicon-->
+<link rel="icon" href="icon.png">
+
+
+
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  margin: 0;
+  text-align: center !important;
+}
+
+</style>
+
+<div id="loader">
+  <div id="one"></div>
+  <div id="two"></div>
+</div>
+
+<div id="loadermessage">Processing the data...</div>
+
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("loadermessage").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+
+
+
+<body>
+
+  
+ 
+
+<div style="margin-top:-10px;text-align:center !important;padding:1px 16px;">
+
+ <header>
+ 
+
+  <h1>Data<span style="color:purple">Science</span></h1></span>
+
+  <h2><b>by Nataly Tsangarides</b> </h2>
+
+  <p>
+    <a class="button" href="index.html"><i class="fas fa-home faa-home animated-hover fa-4x" style="font-size: 1em;"></i> Home</a>  
+    <a class="button" href="portfolio.html"><i class="fas fa-chart-bar faa-chart-bar animated-hover fa-4x" style="font-size: 1em;"></i> Portfolio</a>
+    <a class="buttonActive" href="project.html"><i class="fas fa-edit"></i> Project</a> 
+    <a class="button" href="https://github.com/Spencer-S-Wood/Spencer-S-Wood.github.io"><i class="fab fa-github faa-github animated-hover fa-4x" style="font-size: 1em;"></i> Github</a> 
+    <a class="button" href="https://rapidcharts.io/datascience"><i class="fas fa-book faa-book animated-hover fa-4x" style="font-size: 1em;"></i> Course</a>
+  </p>
+
+  <h3>How does our past shape the future.......?</h3>
+  <h4><b>Comparing the legacies of colonialism in Africa</b></h4>
+    
+    <p>In 1885 European leaders met for a conference in Berlin at the home of Kaiser Wilhelm. In the middle of his grand dining room table lay a map of Africa.
+      Over the next 3 monyths the continent would be carved up by European powers as the scrambled to get their hands of the promising(blah blah blah).
+      While the Belgians, Italians, Germans, Spanish and Portuguese all got a slice; It was the British and French who claimed the most taking control of 
+      most of West and Southern Africa respectively. By 1960 most of the countries had regained their independence. (....differing pull out polcies).
+      Is there a pattern between how well-off African countries are today based on who they were claimed by in the dining room of Wilhelm over 150 years ago?</p>
+
+   <iframe title="Context" aria-label="Map" id="datawrapper-chart-qhiB1" src="https://datawrapper.dwcdn.net/qhiB1/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 80% !important; border: none;" height="284"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+   </script>
+
+<p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Economic Performace</p>
+
+<!--CHART EDUACTION -->
+<div class="chart" id="Chart1">
+  <script>
+    var myChart1 = "Project Chart 1.json";
+    vegaEmbed('#Chart1', myChart1);
+  </script>
+  </div>
+
+  <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>When comparing countries development a natural starting point is to look at how their economies have grown since colonialism ended. 
+    To do this I retrieved the relevant data from the World Bank API endpoints directly and layered the data sets to build the charts. This means
+    the charts will be updated automatically so countries future progression can be tracked. One problem I had was that the JSON string that was returned could not be parsed
+    so I used an XML to JSON converter I found online which enabled the data to be JSON string to be parsed.
+    The chart shows that overall former British colonies have grown quicker albeit for worse performing eoconomies in the group this difference is negligible</p>
+
+<p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Median Income</p>  
+
+  <!--CHART INCOME -->
+<div class="chart" id="Chart2">
+  <script>
+    var myChart2 = "GrowthWOTips.json";
+    vegaEmbed('#Chart2', myChart2);
+  </script>
+  </div>
+
+  <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>This graph was made using six different FRED APIs, one for 
+    each of the states. As the FRED API cannot be accessed directly from an API call, I used a CORS reverse proxy. As illustrated by the graph, up until the Financial Crisis of 2008,
+     the rank of median household income was relatively stable, with no 
+    particular pattern differentiating republican and democratic states. More recently however, specifically after 2014, all three democratic states from our sample 
+    are ranking at the top while the three republican ones are at the bottom. While Republican areas of the country rely 
+    on “traditional” industries that require lower skills, like manufacturing and resource extraction, while Democratic, mostly urban districts contain large concentrations of the nation’s
+     higher-skill, higher-tech professional and digital services. <a href=https://www.brookings.edu/blog/the-avenue/2019/09/10/america-has-two-economies-and-theyre-diverging-fast/)> (source)</a>  </p>
+
+
+    <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">LGBTQ</p>  
+
+ <!--CHART LGBTQ -->
+ <div class="chart" id="Chart4">
+  <script>
+    var myChart4 = "project/LGBTQ.json";
+    vegaEmbed('#Chart4', myChart4);
+  </script>
+  </div>
+
+  <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>For this graph, I used as a proxy for LGBTQ population same-sex couple households. 
+    This proxy might not be the most accurate since a lot of same-sex couples do not live together and there are members of the LGBTQ community that are not in a same-sex relationship. 
+    However, it can still illustrate some useful results.  I used data from the <a href="https://www.census.gov/newsroom/press-releases/2019/same-sex-households.html"> Census</a> for same-sex 
+    couple households as well as total number of households and with my own calculations, using Excel, 
+    I generated the data to create the graph. The results are similar throughout the whole period; democratic states have larger LGBTQ populations relative to their total population. 
+
+      <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Media</p>  
+
+        <!--CHART MEDIA -->
+        <div class="chart" id="Chart5">
+         <script>
+           var myChart5 = "project/foxnews.json";
+           vegaEmbed('#Chart5', myChart5);
+         </script>
+         </div>
+       
+         <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>For the linear regression graph, I regressed the percentage of republican vote on the percentage of Fox News listenership 
+          for all 50 states, for more representative results. The graph suggests a strong positive correlation between Fox News and republican voting. Fox News has been described as practicing biased reporting in favour of the
+           Republican Party, its politicians, and conservative causes while portraying the Democratic Party in a negative light. Research also suggests that Fox News has a causal impact on republican voting. <a href=https://www.econ.umd.edu/publication/fox-news-effect-media-bias-and-voting> (source)</a></p>
+      
+           <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Religion</p>  
+
+            <!--CHART RELIGION -->
+            <div class="chart" id="Chart6">
+             <script>
+               var myChart6 = "project/religion.json";
+               vegaEmbed('#Chart6', myChart6);
+             </script>
+             </div>
+             <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>The chart divides people into three different groups: Nonreligious, Moderately Religious and Very Religious. 
+              The data was edited manually on Vega-Lite using the data from <a href="https://www.statista.com/statistics/221454/share-of-religious-americans-by-state/"> Statista.</a>
+              The chart suggests that the republican states from our sample tend to be more religious while democratic states have higher percentages of nonreligious populations. 
+              The underlying explanations for the relationship are complex, including differing positions of the parties on moral and values issues such as abortion and same-sex marriage, and geographic patterns of 
+              residency that are simultaneously related to religiousness and partisanship. <a href="https://news.gallup.com/poll/174134/religion-remains-strong-marker-political-identity.asp"> (source)</a></p>
+              
+              
+             </p>  
+        
+              <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Race and Ethnicity</p>  
+
+                <!--CHART RACE -->
+                <div class="chart" id="Chart7">
+                 <script>
+                   var myChart7 = "project/race.json";
+                   vegaEmbed('#Chart7', myChart7);
+                 </script>
+                 </div>
+               
+                 <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>The trellis chart illustrates the race
+                   distribution in the six different states. The data was scraped using Python Pandas and the colab notebook can be found <a href="https://colab.research.google.com/drive/1IWnpPgD1fCFBrQ4AT0KAedmoaZwL2fkg?usp=sharing">here.</a>
+                   The desired data format in order to create the trellis chart was achieved using Excel. 
+                   From the chart we could conclude that the demographic composition of an area does not provide a significant correlation 
+                   with its partisanship. Republican voters are in general more likely to be white, however, we see a strongly Democratic state such as Washington being 
+                   made up by a mostly white population, while the Republican state of Texas has a less significant percentage of white population. While Texas is not currently considered 
+                   a swing state, changes in its demographic composition, mostly due to immigration, has let some to wonder if the state could become more politically competitive down the road. 
+                   <a href=https://www.pewresearch.org/2020/09/23/the-changing-racial-and-ethnic-composition-of-the-u-s-electorate> (source)</a>
+                  </p>  
+                  
+                  <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Conclusion and Limitations</p>    
+                    
+                    <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>There are a few fundamental differences in the partisan orientation of different demographic 
+                      groups, which have also grown wider in recent years, making the USA as polarized as ever.  While most of the characteristics presented above provide clear correlations between them and political party
+                       identification, the evidence presented is not enough to draw conclusions about causality. In most cases, the relationship could be two-way causal as parameters influence one another. However, the results shown provide some useful insight 
+                       and a motivation for further research on the subject.  </p>
+
+                       <h5><b>Note: The data sources used in each graph are indicated in the subtitle of the chart. For any sources used in the text, links are available. </b></h5>
+
+</div> 
+</header>
+</body>
+</html>
