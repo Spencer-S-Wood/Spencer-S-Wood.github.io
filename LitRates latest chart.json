@@ -1,0 +1,85 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+     "title": {
+    "text": "How educated is Africa?",
+    "fontSize": 12,
+    "subtitle":["Changes in literacy, Source: World Bank   *0 indicates no data*"],
+    "subtitleFontStyle":"italic",
+    
+    "subtitleFontSize":10, "anchor": "start"
+  },
+  
+  "background": "ghostwhite",
+
+  "width": 300,
+  "height": 300,
+  "view": {"stroke": "transparent"},
+
+   "params": [    
+  {"name":"yearSelector", "value":2004,
+     "bind":{
+       "input": "range",
+       "min": 1974, 
+       "max": 2021, 
+       "step": 1,
+       "name": "Year:"}}],   
+
+  "projection": {"type": "azimuthalEqualArea"},
+  "mark": {
+    "type": "geoshape",
+    "stroke" : "black",
+    "strokeWidth": 1.25},
+    
+  
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/LR1.csv",
+    "format": {"type": "csv"}
+  },
+
+  "transform": [
+{"calculate": "toNumber(yearSelector)", "as": "yearS"},
+    {"filter":"datum.yearS == datum.year"},
+
+  {    
+  "lookup": "Country",
+  "from": {
+    "key": "properties.name",
+    "fields": ["properties","geometry","type"],
+    "data": {"url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/GeoAfrica.json",
+    "format":{"property":"features"}}
+      }
+       }],
+
+
+  "encoding":{
+    "color":{
+      "field":"Lit Rate",
+      "legend":{
+        "title": null,
+        "orient": "right",
+        "direction": "vertical"},
+        "type": "quantitative",
+        "scale":{
+          "scheme": "darkmulti",
+          "domain": [5,100],
+          "type": "linear",         
+          "reverse": true}
+
+        
+
+          
+                },
+                
+                
+        "tooltip":[
+      {"field":"properties.name", "title": "Country"},
+            {"field":"Region()", "title": "Region"},     
+      {"field":"Lit Rate", "title": "Literacy Rate %", "format": ",d"}
+    ]     
+                
+                
+                
+                
+                }}
