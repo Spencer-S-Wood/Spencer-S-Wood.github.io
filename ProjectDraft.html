@@ -91,7 +91,7 @@ body {
   <h3>How does our past shape the present.......?</h3>
   
     
-    <p>In 1885 European powers met in Berlin to discuss how Africa would be carved up between them; with the British and French taking control of large parts of Western and Southern Africa respectively. After the War these powers realised they could no longer keep control of their colonies and began to withdraw their influence. The French largely left these nascent nations to fend for themselves while the British took a more paternalistic approach, adopting their colonies into the commonwealth. Both approaches have proven controversial. This project investigates how well off these countries are today by considering different indicators of development before combining them under one indicator to look for patterns between development and colonial ancestry.</p>
+    <p>In 1885 European powers met in Berlin to discuss how Africa would be carved up between them; with the British and French taking control of large parts of Western and Southern Africa respectively. After the War these powers realised they could no longer keep control of their colonies and began their withdrawal process. The French largely left these nascent nations to fend for themselves while the British took a more paternalistic approach, adopting their colonies into the commonwealth. Both approaches have proven controversial. This project investigates how well off these ex-colonies are today by considering different aspects of development before combining them under one indicator to look for patterns between development and colonial ancestry.</p>
 
    </script>
 
@@ -134,8 +134,8 @@ body {
   </script>
   </div>
 
-  <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>This chart shows how literacy rates have evolved in Africa. While literacy rates have continued
-     to rise in former 'British' Africa, they have shown little growth in former 'French Africa'. I collected the data from the World Bank API directly,
+  <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>This chart shows how literacy-rates have evolved in Africa. While literacy rates have continued
+     to rise in former-'British'-Africa, they have shown little growth in former-'French'-Africa. I collected the data from the World Bank API directly,
       using a linear interpolation to impute missing values so that trends could be visualised over time on a choropleth. 
      <a href=https://colab.research.google.com/drive/1aVee5HRX01iiayJcy3JJnIdvq0RHMqlC> (Colab)</a> 
 
@@ -208,15 +208,15 @@ body {
                       <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>Individually these charts are insightful but they fail to capture the overall standard of living in each individual country, 
                         nor aggregate differences between country groups. I combine each of these indicators of development into a single indicator which I have named the Multi-Dimensional Development indicator.
                          This provides a more comprehensive measure of development than HDI as it considers government quality, security risks and access to healthcare - each fundamental reflections of a country’s prosperity.
-                          I did this by merging the data sets and converting country values for each indicator into z scores. The benefit of using z scores is that governments/NGOs can identify where investment shoud be targeted. 
-                          For example, the CAF was -0.3 s.d from the mean for Hospitals per Capita and -1.6 s.d for literacy rates, suggesting that investing in education should be more of a priority.
+                          I did this by merging the data sets and converting country values for each indicator into z scores. The benefit of using z scores is that it can identify where investment shoud be targeted. 
+                          For example, the CAF was -0.3(s.d) from the mean for Hospitals per-Capita and -1.6(s.d) for literacy-rates, suggesting that investing in education should be more of a priority.
                            Another benefit of my indicator is that it largely relies on API data so can be updated easily to track countries progress.
-                            Before plotting the chart I reweighed the indicators based on reliability of the data source and re-scaled the scores so that they were easier to interpret.<a href=https://colab.research.google.com/drive/1GiTcv3Sd51021SMU7HGDvLnJ46dun0MB#scrollTo=CYM-e25uC5tR> (MDDI Calculation)</a><a href=https://colab.research.google.com/drive/1D_kztvN4Czsbb4aHKMB3p0nCB6K1DDg3#scrollTo=3w6URagloT-T> (Cleaing data sets)</a>
+                            Before plotting the chart I weighed the indicators based on reliability of the data source and re-scaled the scores so that they were easier to interpret.<a href=https://colab.research.google.com/drive/1GiTcv3Sd51021SMU7HGDvLnJ46dun0MB#scrollTo=CYM-e25uC5tR> (MDDI Calculation)</a><a href=https://colab.research.google.com/drive/1D_kztvN4Czsbb4aHKMB3p0nCB6K1DDg3#scrollTo=3w6URagloT-T> (Cleaing data sets)</a>
 
 
                             <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>
                             Overall, the MDDI suggests there is significant disparity in the development of the two country groups with ex-British colonies generally more developed today than ex-French colonies. 
-                            This implies that European powers ought to show a responsibility towards countries they colonised, albeit in a way that is non-exploitative or paternalistic.</p>  
+                            This implies that European powers ought to show a responsibility towards countries they colonised, albeit in a way that is non-exploitative.</p>  
 
 
 
