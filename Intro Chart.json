@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Scramble for Africa",
+    "subtitle": "Sub-Saharan terrortoires colonised by Britian and France",
+    "anchor": "start",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10
+  },
+
+
+  "background": "ghostwhite",
+
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/GeoAfrica.json",
+    "format": {"property": "features"}
+  },
+  "projection": {"type": "azimuthalEqualArea"},
+  "mark": {
+    "type": "geoshape",
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+  "encoding": 
+      { "color": {
+    "field": "properties.name",
+    "type": "nominal",
+    "scale": {
+  "domain": ["Algeria", "Angola", "Benin", "Morocco","Tunisia","Egypt","Eritrea","Ethiopia","Somalia","Tanzania","Rwanda","Burundi","Mozambique","Namibia","Angola","Dem. Rep. Congo", "Eq. Guinea","Cameroon","Togo","Liberia","Guinea-Bissau","Djibouti","S. Sudan","Libya",
+  
+  
+"Guinea","Benin","Burkina Faso","Central African Rep.","Côte d'Ivoire","Congo","Gabon","Mali","Mauritania","Niger","Senegal","Chad",
+
+"Botswana","Ghana","Gambia","Kenya","Lesotho","Malawi","Nigeria","Sudan","Sierra Leone","Swaziland","Uganda","South Africa","Zambia", "Zimbabwe"
+
+],
+
+
+
+
+
+
+
+  "range": ["#DCDCDC", "#DCDCDC", "#DCDCDC","#DCDCDC", "#DCDCDC", "#DCDCDC","#DCDCDC", "#DCDCDC", "#DCDCDC","#DCDCDC", "#DCDCDC", "#DCDCDC","#DCDCDC", "#DCDCDC", "#DCDCDC","#DCDCDC", "#DCDCDC", "#DCDCDC","#DCDCDC", "#DCDCDC","#DCDCDC","#DCDCDC", "#DCDCDC","#DCDCDC",
+  
+  
+  
+  "#3F51B5", "#3F51B5", "#3F51B5","#3F51B5", "#3F51B5", "#3F51B5","#3F51B5", "#3F51B5", "#3F51B5" ,"#3F51B5", "#ed6a61", "#ed6a61", 
+  
+  
+  "#ed6a61","#ed6a61","#ed6a61","#ed6a61","#ed6a61","#ed6a61","#ed6a61","#ed6a61","#ed6a61","#ed6a61","#ed6a61","#ed6a61","#ed6a61","red"
+  
+  ]
+},
+    
+    "legend": null},
+
+                       "tooltip":[
+  {"field":"properties.name", "title":"Country"}
+
+
+]
+    
+
+    }}
+
+
+    
+  
+  
+  
