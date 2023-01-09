@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spencer Wood</title>
+
+    <link rel="stylesheet" href= "Project.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+
+        <!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    
+    <!--Favicon-->
+<link rel="icon" href="icon.png">
+
+
+
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Monserrat&display=swap');
+
+body {
+  margin: 0;
+  text-align: center !important;
+}
+
+</style>
+
+<div id="loader">
+  <div id="one"></div>
+  <div id="two"></div>
+</div>
+
+<div id="loadermessage">Processing the data...</div>
+
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("loadermessage").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+
+
+
+<body>
+
+  
+ 
+
+<div style="margin-top:-10px;text-align:center !important;padding:1px 16px;">
+
+ <header>
+ 
+
+  <h1>Pro<span style="color:rgb(30,144,255)">ject</span></h1></span>
+
+ 
+
+  <p>
+    <a class="button" href="index.html"><i class="fas fa-home faa-home animated-hover fa-4x" style="font-size: 1em;"></i> Home</a>  
+    <a class="button" href="PortfolioV3.html"><i class="fas fa-chart-bar faa-chart-bar animated-hover fa-4x" style="font-size: 1em;"></i> Portfolio</a>
+    <a class="buttonActive" href="ProjectDraft.html"><i class="fas fa-edit"></i> Project</a> 
+    <a class="button" href="https://github.com/Spencer-S-Wood/Spencer-S-Wood.github.io"><i class="fab fa-github faa-github animated-hover fa-4x" style="font-size: 1em;"></i> Github</a> 
+    <a class="button" href="https://rapidcharts.io/datascience"><i class="fas fa-book faa-book animated-hover fa-4x" style="font-size: 1em;"></i> Course</a>
+  </p>
+
+  <h3>How does our past shape the present.......?</h3>
+  
+    
+    <p>In 1885 European powers met in Berlin to discuss how Africa would be carved up between them; with the British and French taking control of large parts of Western and Southern Africa respectively. After the War these powers realised they could no longer keep control of their colonies and began to withdraw their influence. The French largely left these nascent nations to fend for themselves while the British took a more paternalistic approach, adopting their colonies into the commonwealth. Both approaches have proven controversial. This project investigates how well off these countries are today by considering different indicators of development before combining them under one indicator to look for patterns between development and colonial ancestry.</p>
+
+   </script>
+
+   <p class="h1"><span style="color: black; font-weight: 1000;font-size:20px;">How do trends in economic growth differ?</p>
+
+<!--CHART EDUACTION -->
+<div class="chart" id="Chart1">
+  <script>
+    var myChart1 = "Project Chart 1.json";
+    vegaEmbed('#Chart1', myChart1);
+  </script>
+  </div>
+
+  <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>This chart retrieves the relevant data from the World Bank API endpoints directly and layers the data sets.
+     One problem I had was that the initial JSON string that was returned could not be parsed. I solved this by using an XML to JSON converter.
+      The chart shows that overall former British colonies have grown quicker albeit poor performing economies in each group have followed similar trends.</p>
+
+
+
+  <!--CHART INCOME -->
+<div class="chart" id="Chart2">
+  <script>
+    var myChart2 = "GrowthWOTips.json";
+    vegaEmbed('#Chart2', myChart2);
+  </script>
+  </div>
+
+  <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>To better understand the between group trends I calculate the average GDP growth of each group. 
+    I faceted the chart to include the median to show that these disparities are not just driven by outliers. 
+     <a href=https://colab.research.google.com/drive/1yv7hKoR0Ix0Sm1476tFXUbMRhaxt8H75#scrollTo=IvilJjzltFHH>(Colab)</a> </a>  </p>
+
+
+    <p class="h1"><span style="color: black; font-weight: 1000;font-size:20px;">How does access to education vary across Africa?</p>  
+
+ <!--CHART LGBTQ -->
+ <div class="chart" id="Chart4">
+  <script>
+    var myChart4 = "LitRates latest chart.json";
+    vegaEmbed('#Chart4', myChart4);
+  </script>
+  </div>
+
+  <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>This chart shows how literacy rates have evolved in Africa. While literacy rates have continued
+     to rise in former 'British' Africa, they have shown little growth in former 'French Africa'. I collected the data from the World Bank API directly,
+      using a linear interpolation to impute missing values so that trends could be visualised over time on a choropleth. 
+     <a href=https://colab.research.google.com/drive/1aVee5HRX01iiayJcy3JJnIdvq0RHMqlC> (Colab)</a> 
+
+      <p class="h1"><span style="color: black; font-weight: 1000;font-size:20px;">What about access to healthcare?</p>  
+
+        <!--CHART MEDIA -->
+        <div class="chart" id="Chart5">
+         <script>
+           var myChart5 = "Access to Health Care.json";
+           vegaEmbed('#Chart5', myChart5);
+         </script>
+         </div>
+       
+         <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>Next, I wanted to see if there was a difference in the breadth and quality of healthcare systems between the country groups. 
+            I did this by calculating hospitals per capita and plotting against life expectancy. I scraped data on the number of Hospitals <a href=https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(17)30488-6/fulltext> (here)</a> and population data <a href=https://www.worldometers.info/population/countries-in-africa-by-population/> (here)</a>.
+             I then used a loop to batch download data on life expectancy from WHO. The loop can easily be rerun using different country codes or years in the future. 
+             Surprisingly there was no relationship between life expectancy and my proxy of access to healthcare. <a href=https://colab.research.google.com/drive/1-Tk7hsIIz204GPE0IYszSjAQWWIjbv_E>(colab)</a></p>
+      
+           <p class="h1"><span style="color: black; font-weight: 1000;font-size:20px;">Which areas are safer?</p>  
+
+            <!--CHART RELIGION -->
+            <div class="chart" id="Chart6">
+             <script>
+               var myChart6 = "Africa Violence Map.json";
+               vegaEmbed('#Chart6', myChart6);
+             </script>
+             </div>
+             <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>Social cohesion is an important determinant of a nation’s prosperity. This chart uses a geocoded data set to show instances of social unrest (1990-2017).
+                 At first it would seem there are no apparent differences between British and French country groups.
+                  However, using the tool tip reveals that (excluding Kenya and Nigeria) most unrest in the red countries were in the 1990s and early 2000s whilst instances in the blue countries tend to be more recent reflecting their current instability.
+              
+             </p>  
+        
+              <p class="h1"><span style="color: black; font-weight: 1000;font-size:20px;">How good are the instititions that govern today?</p>  
+
+                <!--CHART RACE -->
+                <div class="chart" id="Chart7">
+                 <script>
+                   var myChart7 = "Twitter Sentiment.json";
+                   vegaEmbed('#Chart7', myChart7);
+                 </script>
+                 </div>
+               
+                 <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>One way to measure this is to consider how people living in these countries feel about their governments.
+                     To do this I used a loop to retrieve tweets from Twitters API containing the query 'our government' or ‘le regime’ for French speaking countries. 
+                     Initially I tried specifying the country but this often-returned tweets about the USA (this could be due to VPNS). 
+                     To overcome this, I specified tweets that were posted within a 50 mile radius of the country’s most populous capital city. 
+                     I used NLP to analyse how positive each tweet was. There seems to be no obvious difference between country groups which both surprisingly exhibit a positive skew suggesting they feel positively about their government. 
+                     However this more likely reflects a bias in the Natural language processor.
+                   <a href=https://colab.research.google.com/drive/1cw12A3RnBriX5_hVZHI_ElUcI5ieMkBG> (Colab)</a>
+                  </p>  
+                  
+                  <p class="h1"><span style="color: black; font-weight: 1000;font-size:20px;">A Multi-Dimensional indicator of Development (MDID)</p>    
+                    
+                    <div class="double-chart">
+                        <div class="double-chart" id="Chart8">
+                          <script>
+                            var myChart8 = "FinalChart.json";
+                            vegaEmbed('#Chart8', myChart8);
+                          </script>
+                        </div>
+                        <div class="double-chart" id="Chart9">
+                          <script>
+                            var myChart9 = "Intro Chart.json";
+                            vegaEmbed('#Chart9', myChart9);
+                          </script>
+                        </div>
+                      </div>
+                      
+                      <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>Individually these charts are insightful but they fail to capture the overall standard of living in each individual country, 
+                        nor aggregate differences between country groups. I combine each of these indicators of development into a single indicator which I have named the Multi-Dimensional Development indicator.
+                         This provides a more comprehensive measure of development than HDI as it considers government quality, security risks and access to healthcare - each fundamental reflections of a country’s prosperity.
+                          I did this by merging the data sets and converting country values for each indicator into z scores. The benefit of using z scores is that governments/NGOs can identify where investment shoud be targeted. 
+                          For example, the CAF was -0.3 s.d from the mean for Hospitals per Capita and -1.6 s.d for literacy rates, suggesting that investing in education should be more of a priority.
+                           Another benefit of my indicator is that it largely relies on API data so can be updated easily to track countries progress.
+                            Before plotting the chart I reweighed the indicators based on reliability of the data source and re-scaled the scores so that they were easier to interpret.<a href=https://colab.research.google.com/drive/1GiTcv3Sd51021SMU7HGDvLnJ46dun0MB#scrollTo=CYM-e25uC5tR> (MDDI Calculation)</a><a href=https://colab.research.google.com/drive/1D_kztvN4Czsbb4aHKMB3p0nCB6K1DDg3#scrollTo=3w6URagloT-T> (Cleaing data sets)</a>
+
+
+                            <p class="h3"><span style="color: black; font-weight: 1000;font-size:20px;"></span>
+                            Overall, the MDDI suggests there is significant disparity in the development of the two country groups with ex-British colonies generally more developed today than ex-French colonies. 
+                            This implies that European powers ought to show a responsibility towards countries they colonised, albeit in a way that is non-exploitative or paternalistic.</p>  
+
+
+
+
+                        
+                       
+</header>
+</body>
+</html>
