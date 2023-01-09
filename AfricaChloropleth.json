@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 250,
+  "height": 250,
+  "background": "whitesmoke",
+  "view": {"stroke": "transparent"},
+
+   "title": {
+    "text": "Health of African Economies",
+    "fontSize": 12,
+    "subtitle":["GDP per Capita 2020. Source: World Bank  *0 indicates no data*"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10, "anchor": "middle"
+  },
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/GeoAfrica.json",
+    "format": {"property": "features"}
+  },
+
+  "transform": [{
+  "lookup": "properties.name",
+  "from": {
+    "key": "Country Name",
+    "fields": ["GDP"],
+    "data": {"url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/PortfolioMAP1.csv"}}}],
+
+  "projection": {"type": "mercator"},
+      "mark": {
+    "type": "geoshape",
+    "stroke": "black",
+    
+    "strokeWidth": 1.1
+  },
+
+  "encoding":{
+    "color":{
+      "field":"GDP",
+      "legend":{
+        "title": null,
+        "orient": "right",
+        "direction": "vertical"},
+        "type": "quantitative",
+        "scale":{
+          "scheme":"darkmulti",
+          "reverse": true}},
+    "tooltip":[
+      {"field":"properties.name", "title": "Country"},
+      {"field":"GDP", "title": "GDP per Capita:", "format": "$,d"}
+    ]
+  }}

@@ -7,6 +7,8 @@
       "subtitleFontSize":10,
       "anchor": "start",
       "color": "black"},
+
+      "background": "whitesmoke",
   
   "data":{"url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/IMFlending_Adjusted.csv"},
   
@@ -14,11 +16,11 @@
 
 
   "height": 300,
-  "width": 300,
+  "width": 250,
 
   "mark": {
     "type": "bar",
-    "color": "#792F44"},
+    "color": "#6B5B95"},
 
 "encoding": {
      "x": {

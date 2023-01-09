@@ -1,107 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Title for the page -->
-    <title>Spencer Wood Data Science</title>
+    <title>Spencer Wood</title>
 
-    <!-- Link to my style sheet -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href= "index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <!--The next three lines allow the Vega embed-->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+  
+      <!--Favicon-->
+<link rel="icon" href="icon1.png">
+
 </head>
 
-
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+  
+  body {
+    margin: 0;
+    text-align: center !important;
+  }
+  
+  </style>
 
 <body>
-    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
-    <div class="myWeek1">
-        <h1>Homework - Week 1</h1>
-        
-        <h3>Premiership - home advantage</h3>
-        <p>The first chart analyses whether teams have an advantage when they are playing at home</p>
-        <div class="chart" id="Chart1"></div>
 
-        <h3>Drug deaths in Scotland</h3>
-        <p>The second looks at reported drug deaths in Scotland between 1996 and 2020</p>
-        <div class="chart" id="Chart2"> </div>
-
-    <hr>
-    <h2>Week 2</h2>
-    <p>This week we moved onto writing .json files to create graphs where the data is hosted on our Github. We looked to improve
-        <br>
-        on a graph taken from a FT article, to make the data story more robust.
-    </p>
-    <hr>
-
-    <container class="container">
-
-        <div id="text">
-            <h3>IMF Lending Chart from FT</h3>
-            <p> The first chart is recreated from a FT article. <br> it is telling a story of rising outstanding credit <br> over the studied period.</p>
-        
-      
-        <div class="chart" id="IMFChart1"></div>
-        </div>
-      
-        <div id="text2">
-            <h3>'Fixed' Chart</h3>
-            <p>This chart shows the same lending figures as a <br> percentage of global GDP in each year. <br> The same data tells a different story. </p>
-        <div class="chart" id="IMFChart2"> </div>
-        </div>
-    </container>
-
-<!-- Third Week graph is in this container -->
-    <hr>
-    <h2>Week 3</h2>
-    <p>This week we looked at moving a dataset from a .csv file into our .json files using python in Google CoLab
-    </p>
-    <hr>
-
-    <container class="container">
-
-        <div id="text">
-            <h3>Income Shares in Italy</h3>
-            <p> This chart looks at the disparity in total income between the top 1% of earners and bottom 50% of earners in Italy</p>
-        
-    
-        <div class="chart" id="ItalyGini"></div>
-        </div>
-        <hr>
-    </container>
-</div> 
+  <h1>Hey<span style="color:rgb(0, 128, 13)">There!</span></h1></span>
+  <h2><b>Welcome to my Datascience page</b> </h2>
 
 
+  <div class="nav">
+    <input type="checkbox">
+    <span class="lines"></span>
+    <span class="lines"></span>
+    <span class="lines"></span>
+      <div class="menu">
+        <li><a href="PortfolioV3.html"> Portfolio</a></li>
+        <li><a href="project.html"> Project</a></li>
+        <li><a href="https://github.com/NatalyTsangarides/NatalyTsangarides.github.io"> Github</a></li>
+        <li><a href="https://rapidcharts.io/datascience"> Course</a></li>
+      </div>
+    </div>
+
+  <div class="sectional_nav">
+    <input type="checkbox">
+    <span class="lines"></span>
+    <span class="lines"></span>
+    <span class="lines"></span>
+      <div class="smenu">
+        <li><a href="portfolio.html"> Portfolio</a></li>
+        <li><a href="project.html"> Project</a></li>
+        <li><a href="https://github.com/NatalyTsangarides/NatalyTsangarides.github.io"> Github</a></li>
+        <li><a href="https://rapidcharts.io/datascience"> Course</a></li>
+  </div>
+</div>
 
 
-
-
-    </div> 
 </body>
 
 
-<script>
-    //Define charts:
-    var myChart1 = "vis1_chartFootball1.json";
-    var myChart2 = "chartextreme4.json";
-    var IMFChart1 = "IMFlending.json"
-    var IMFChart2 = "IMFlendingadjusted.json"
-
-    // Embed charts:
-    vegaEmbed('#Chart1', myChart1);
-    vegaEmbed('#Chart2', myChart2);
-    vegaEmbed('#IMFChart1', IMFChart1);
-    vegaEmbed('#IMFChart2', IMFChart2);
-</script>
 
 </html>
 

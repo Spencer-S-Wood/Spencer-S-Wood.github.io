@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Africa",
+      "subtitle": "A base map of Africa with added tooltip",
+      "anchor": "start",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10
+    },
+
+    "background": "whitesmoke",
+    "width": 250,
+    "height": 250,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/GeoAfrica.json",
+      "format": {"property": "features"}
+    },
+    "projection": {"type": "azimuthalEqualArea"},
+    "mark": {
+      "type": "geoshape",
+      "stroke": "black",
+      "fill": "floralwhite",
+      "strokeWidth": 1
+    },
+    "encoding": {"tooltip": {"field": "properties.name", "type": "nominal"}}
+  }

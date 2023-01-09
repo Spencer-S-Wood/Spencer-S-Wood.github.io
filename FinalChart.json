@@ -1,0 +1,54 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "width": 300,
+    "height": 300,
+    "view": {"stroke": "transparent"},
+
+    "background": "ghostwhite",
+  
+     "title": {
+      "text": "MDDI scores",
+      "fontSize": 12,
+      "subtitle":["Source: Own Calculation"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10, "anchor": "start"
+    },
+    
+    "data": {
+      "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/GeoAfrica.json",
+      "format": {"property": "features"}
+    },
+  
+    "transform": [{
+    "lookup": "properties.name",
+    "from": {
+      "key": "Country",
+      "fields": ["Avg"],
+      "data": {"url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/Finalmap.csv"}}}],
+  
+    "projection": {"type": "mercator"},
+        "mark": {
+      "type": "geoshape",
+      "stroke": "black",
+      
+      "strokeWidth": 1.1
+    },
+   
+    "encoding":{
+      "color":{
+        "field":"Avg",
+        "legend":{
+          "title": null,
+          "orient": "right",
+          "direction": "vertical"},
+          "type": "quantitative",
+          "scale":{
+            "domain": [3,7.8],
+            "scheme":"darkgold",
+            "reverse": true}},
+      "tooltip":[
+        {"field":"properties.name", "title": "Country"},
+        {"field":"Avg", "title": "MDDI score", "format": ".2"}
+      ]
+    }}

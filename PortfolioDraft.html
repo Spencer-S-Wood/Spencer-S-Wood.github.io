@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="portfolio.css">
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<head>
+<h1>Data Science Portfolio</h1>
+<h2>Spencer Wood</h2>
+<head>
+    
+<body>
+<div class="navbuttons">
+    <button class="button" style="vertical-align:middle" onclick="location.href='https://rapidcharts.io/datascience'"><span>Course </span></button>
+    <button class="button" style="vertical-align:middle" onclick="location.href='project.html'"><span>Project </span></button>
+    <button class="button" style="vertical-align:middle" onclick="location.href='portfolio.html'"><span>Portfolio </span></button>
+    <button class="button" style="vertical-align:middle" onclick="location.href='https://github.com/lizziealliott'"><span>GitHub </span></button>
+</div>
+    
+
+</div class="main">
+
+
+<h3 class="bodyText">Week 1: Setting up web page and embedding two charts.</h3>
+<container class="bcontainer">
+  <div class="chart" id="chart1">
+      <script>
+        var myChart1 = "Surf ForeCast.json";
+        vegaEmbed('#chart1', myChart1);
+      </script>
+  </div>
+<div class="chart" id="chart2">
+    <script>
+      var myChart2 = "Prices.json";
+      vegaEmbed('#chart2', myChart2);
+    </script>
+</div>
+</container>
+
+
+<h3 class="bodyText"> Week 2: Two charts - replicating one from the Financial Times and your first original.</h3>
+<container class="bcontainer">
+<div class="text-level-A"> The IMF lent the most (as a % of world GDP) in 1984, which suggests this year was the riskiest time to invest, not 2022.</a> 
+</div>
+<div class="chart" id="chart4">
+  <script>
+    var myChart4 = "IMFlending.json";
+    vegaEmbed('#chart4', myChart4);
+  </script>
+</div>
+<div class="chart" id="chart5">
+  <script>
+    var myChart5 = "IMFlendingadjusted.json";
+    vegaEmbed('#chart5', myChart5);
+  </script>
+</div>
+</container>
+  
+
+<h3 class="bodyText"> Week 3: Two charts- inline data objects and visual encodings.</h3>
+<container class="bcontainer">
+  <div class="text-level-A">A line chart and tooltip, instead of an area chart, make it much clearer to see the disparity in unemployment rates across time and countries.</a> 
+  </div>
+<div class="chart" id="chart6">
+  <script>
+    var myChart6 = "Portfolio3V1.json";
+    vegaEmbed('#chart6', myChart6);
+  </script>
+</div>
+<div class="chart" id="chart7">
+  <script>
+    var myChart7 = "Portfolio3V2.json";
+    vegaEmbed('#chart7', myChart7);
+  </script>
+</div>
+</container>
+  
+
+<h3 class="bodyText"> Week 4: One chart- Implement a data scraper of your own. Any source, any data.</h3>
+<container class="bcontainer">
+  <div class="text-level-A">I used the Premier League website, because the table was already machine-readable and I wanted to scrape a website that wasn’t necessarily academic/economics based. <a class="textLink"
+    href="https://colab.research.google.com/drive/1cZ98W1CjkliktLTX5ddBu3IAfRnuxtD0?usp=sharing" style="color:purple">(Colab)</a>.</a> 
+  </div>
+<div class="chart" id="chart8">
+  <script>
+    var myChart8 = "Portfolio4.json";
+    vegaEmbed('#chart8', myChart8);
+  </script>
+</div>
+</container>
+
+
+<h3 class="bodyText"> Week 5: Nine Charts- build a dashboard.</h3>
+<container class="bcontainer">
+  <div class="text-level-A">UK Trade Balance 1946-2021. The loop used can be found <a class="textLink"
+    href="https://colab.research.google.com/drive/1kw45Yd57tqETYSiFskouXaa4xJrTBO3I?usp=sharing" style="color:purple">here</a>.</a> 
+  </div>
+<div class="grid-container" style = "display: grid;">
+    <div class="grid-item"><div class = dashchart id = "Chart9" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart10" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart11" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart12" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart13" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart14" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart15" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart16" style = "display: block;"></div></div>    
+    <div class="grid-item"><div class = dashchart id = "Chart17" style = "display: block;"></div></div>
+    </div> 
+</div> 
+    <script>
+     //Define charts
+    var myChart9 = "figure8.json";
+    var myChart10 = "figure9.json";
+    var myChart11 = "figure10.json";
+    var myChart12 = "figure11.json";
+    var myChart13 = "figure12.json";
+    var myChart14 = "figure13.json";
+    var myChart15 = "figure14.json";
+    var myChart16 = "figure15.json"; 
+    var myChart17 = "figure16.json"; 
+    // Embed charts:
+    vegaEmbed('#Chart9', myChart9);
+    vegaEmbed('#Chart10', myChart10);
+    vegaEmbed('#Chart11', myChart11);
+    vegaEmbed('#Chart12', myChart12);
+    vegaEmbed('#Chart13', myChart13);
+    vegaEmbed('#Chart14', myChart14);
+    vegaEmbed('#Chart15', myChart15);
+    vegaEmbed('#Chart16', myChart16);
+    vegaEmbed('#Chart17', myChart17);
+    </script> 
+    </div> 
+  </container> 
+  
+<h3 class="bodyText"> Week 7: Two maps - a base map and a choropleth.</h3>
+<container class="bcontainer">
+  <div class="text-level-A">Both maps present Asia, sectioned into 48 countries. The choropleth map shows that China and India have the highest population (over 1.4 billion).</a> 
+</div>
+<div class="chart" id="chart18">
+  <script>
+    var myChart18 = "Africa BaseMap.json";
+    vegaEmbed('#chart18', myChart18);
+  </script>
+</div>
+<div class="chart" id="chart19">
+  <script>
+    var myChart19 = "AfricaChloropleth.json";
+    vegaEmbed('#chart19', myChart19);
+  </script>
+</div>
+</container>
+
+
+
+<h3 class="bodyText"> Week 8: Festival of Economics.</h3>
+<container class="bcontainer">
+  <div class="text-level-A">The ‘Boom and Bust’ lecture discussed excessive bank lending in Japan. Low interest rates increased demand for houses: prices rose. By 1990, the bubble burst. </a> 
+  </div>
+<div class="chart" id="chart20">
+  <script>
+    var myChart20 = "Portfolio 8 Agree.json";
+    vegaEmbed('#chart20', myChart20);
+  </script>
+</div>
+<div class="chart" id="chart21">
+  <script>
+    var myChart21 = "Portfolio 8 Disagree.json";
+    vegaEmbed('#chart21', myChart21);
+  </script>
+</div>
+<div class="text-level-A">Whilst house prices were rising pre-1990, interest rates were not always ‘low’. However, Nikkei does show the incline in prices peaks in 1990. </a> 
+</div>
+</container>
+
+
+
+
+<h3 class="bodyText"> Week 9: Advanced charts.</h3>
+<container class="bcontainer">
+  <div class="text-level-A">Two charts that use advanced analytics: one scatter plot and one bubble chart.</a> 
+  </div>
+  <div class="chart" id="chart22">
+    <script>
+      var myChart22 = "Access to Health Care.json";
+      vegaEmbed('#chart22', myChart22);
+    </script>
+  </div>
+  <div class="chart" id="chart23">
+    <script>
+      var myChart23 = "Twitter sentiment.json";
+      vegaEmbed('#chart23', myChart23);
+    </script>
+  </div>
+</container>
+
+
+
+
+<h3 class="bodyText"> Week 10-11: Supervised Learning – Regression.</h3>
+<container class="bcontainer">
+  <div class="text-level-A">The hypothesis tests whether the level of education in a given US state is linked to the average life expectancy at birth in years.</a> 
+  </div>
+  <img src="graph.jpg" alt=" USA Education & Life Expectancy 2022" width="400" height="350">
+  <style>
+      img {  background-color: white;
+      width: auto;
+      border-width: 0px;
+      border-radius: 10px;
+      border-style:solid;
+      border-color: #7a6a6a;
+      margin-left: -20px;
+      overflow: auto;
+      
+  }
+  </style>
+</div>
+  <div class="text-level-A">The regression shows a moderate positive relationship. 32% of variance in life expectancy can be explained by education. The colab can be found <a class="textLink"
+    href="https://colab.research.google.com/drive/1e2Cc7rruJzPRzoojMPf00T9blX2RXNUT?usp=sharing" style="color:purple">here</a>.</a> 
+  </div>
+</container>
+
+
+<h3 class="bodyText"> Week 10-11: Unsupervised Learning – Clustering.</h3>
+<container class="bcontainer">
+  <div class="text-level-A">The hypothesis tests whether UK cities will be clustered into the 12 UK regions based on their longitudinal and latitudinal bearing. </a> 
+  </div>
+<div class="chart" id="chart24">
+  <script>
+    var myChart24 = "figure23.json";
+    vegaEmbed('#chart24', myChart24);
+  </script>
+</div>
+<div class="chart" id="chart28">
+  <script>
+    var myChart28 = "Portfolio/Week10/Workingage.json";
+    vegaEmbed('#chart28', myChart28);
+  </script>
+</div>
+  <div class="text-level-A">Most regions are clustered fairly accurately, apart from London and the South East. Wales, Scotland and Northern Ireland are also less clear. The colab can be found <a class="textLink"
+    href="https://colab.research.google.com/drive/1s-HjczXjDtdqTDct1NRD3ax4ww3Rx6y1?usp=sharing" style="color:purple">here</a>. </a> 
+  </div>
+</container>
+
+<container class="acontainer">
+</container>
+
+</body>
+</html>

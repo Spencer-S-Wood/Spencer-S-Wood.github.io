@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spencer Wood</title>
+    <title>Nataly Tsangarides</title>
 
-    <link rel="stylesheet" href= "Project.css">
+    <link rel="stylesheet" href= "project.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     
@@ -39,7 +39,7 @@ body {
   <div id="two"></div>
 </div>
 
-<div id="loadermessage">Processing the data...</div>
+<div id="loadermessage">Loading...</div>
 
 
 </head>
@@ -84,44 +84,43 @@ body {
     <a class="button" href="index.html"><i class="fas fa-home faa-home animated-hover fa-4x" style="font-size: 1em;"></i> Home</a>  
     <a class="button" href="portfolio.html"><i class="fas fa-chart-bar faa-chart-bar animated-hover fa-4x" style="font-size: 1em;"></i> Portfolio</a>
     <a class="buttonActive" href="project.html"><i class="fas fa-edit"></i> Project</a> 
-    <a class="button" href="https://github.com/Spencer-S-Wood/Spencer-S-Wood.github.io"><i class="fab fa-github faa-github animated-hover fa-4x" style="font-size: 1em;"></i> Github</a> 
+    <a class="button" href="https://github.com/NatalyTsangarides/NatalyTsangarides.github.io"><i class="fab fa-github faa-github animated-hover fa-4x" style="font-size: 1em;"></i> Github</a> 
     <a class="button" href="https://rapidcharts.io/datascience"><i class="fas fa-book faa-book animated-hover fa-4x" style="font-size: 1em;"></i> Course</a>
   </p>
 
-  <h3>How does our past shape the future.......?</h3>
-  <h4><b>Comparing the legacies of colonialism in Africa</b></h4>
+  <h3>Demographics and Political Orientation:</h3>
+  <h4><b>How US state-specific characteristics relate to political affiliation</b></h4>
     
-    <p>In 1885 European leaders met for a conference in Berlin at the home of Kaiser Wilhelm. In the middle of his grand dining room table lay a map of Africa.
-      Over the next 3 monyths the continent would be carved up by European powers as the scrambled to get their hands of the promising(blah blah blah).
-      While the Belgians, Italians, Germans, Spanish and Portuguese all got a slice; It was the British and French who claimed the most taking control of 
-      most of West and Southern Africa respectively. By 1960 most of the countries had regained their independence. (....differing pull out polcies).
-      Is there a pattern between how well-off African countries are today based on who they were claimed by in the dining room of Wilhelm over 150 years ago?</p>
+    <p>The aim of my project is to look at some specific demographics of a few key states in 
+   the United States, in order to potentially draw some conclusions regarding their connection to 
+   the political affiliation that state historically identifies with. For this, I choose to look at the following states:</p>
 
    <iframe title="Context" aria-label="Map" id="datawrapper-chart-qhiB1" src="https://datawrapper.dwcdn.net/qhiB1/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 80% !important; border: none;" height="284"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
    </script>
 
-<p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Economic Performace</p>
+<p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Educational attainment</p>
 
 <!--CHART EDUACTION -->
 <div class="chart" id="Chart1">
   <script>
-    var myChart1 = "Project Chart 1.json";
+    var myChart1 = "project/educationredblue.json";
     vegaEmbed('#Chart1', myChart1);
   </script>
   </div>
 
-  <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>When comparing countries development a natural starting point is to look at how their economies have grown since colonialism ended. 
-    To do this I retrieved the relevant data from the World Bank API endpoints directly and layered the data sets to build the charts. This means
-    the charts will be updated automatically so countries future progression can be tracked. One problem I had was that the JSON string that was returned could not be parsed
-    so I used an XML to JSON converter I found online which enabled the data to be JSON string to be parsed.
-    The chart shows that overall former British colonies have grown quicker albeit for worse performing eoconomies in the group this difference is negligible</p>
+  <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>This is a density graph including 
+    data from the six different states, grouped together as republican (red) and democrat (blue). The data 
+    was downloaded from the <a href="https://fred.stlouisfed.org/">FRED</a> website and combined six different time series from 2006-2019 for each state. The colab notebook for the manipulation 
+    of the data can be found <a href="https://colab.research.google.com/drive/1qu3l1wATJjvXOsGSuuZQi0LA-UtH6bZg?usp=sharing">here.</a> 
+    As I was combining six different datasets, I firstly merged them using Stata and then exported the csv file onto colab. From this graph, we could draw the conclusion 
+    that democratic states are in general, more educated than republican states.</p>
 
 <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Median Income</p>  
 
   <!--CHART INCOME -->
 <div class="chart" id="Chart2">
   <script>
-    var myChart2 = "GrowthWOTips.json";
+    var myChart2 = "project/stateincomefred.json";
     vegaEmbed('#Chart2', myChart2);
   </script>
   </div>

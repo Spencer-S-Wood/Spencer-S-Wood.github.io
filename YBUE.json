@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   
+   
+      "title": {
+      "text": "Male Employment Rate",
+      "subtitle": "   %  aged 18-24, Seasonally Adjusted, Source:ONS",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start"
+     
+    },
+   
+   
+   
+   
+   
+   
+    "data": {
+      "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/data_ONS-YBUE.json",
+      
+  
+      "format": {"type": "json", "property": "years"}
+    },
+  
+    "width": 200,
+    "height": 180,
+    "mark": {"type": "line", "color": "#6B5B95"},
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {"grid": false},
+        "title": null
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "axis": {"grid": false},
+        "scale": {"domain": [40,100] },
+        "title": null
+      }
+    }
+  }

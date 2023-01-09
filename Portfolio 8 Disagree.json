@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+
+
+
+      "title": {
+       "text": "How much do the British trust their Government?",
+      "subtitle":"Survey on trust in the UK, Source: ONS 2022",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+
+      "background": "whitesmoke",
+
+  "width": 300,
+  "height": 200,
+
+
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/UKtrust.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Trust",
+      "type": "quantitative",
+      "stack": "normalize",
+      "title": null
+    },
+    "y": {
+      "field": "Entity",
+      "type": "ordinal",
+      "title":null
+      
+    },
+    "color": {
+      "field": "Subcategory",
+      "type": "nominal",
+      "scale": { "scheme": "Pastel2" }
+      
+    }
+  }
+}

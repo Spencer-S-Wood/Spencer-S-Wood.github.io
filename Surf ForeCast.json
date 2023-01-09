@@ -1,0 +1,48 @@
+{
+  "data": {
+    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/data/waves/waveHeights_today.csv"
+  },
+
+   "title": {
+    "text": "Surf Forecast Croyde Bay (Devon)",
+    "subtitle": "Possible Wave range. (ft)",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "background": "whitesmoke",
+  
+  "height":200,
+  "width":200,
+
+  "mark": {
+    "type":"area",
+    "color":"#0BB5FF"
+      },
+    
+  "encoding": {
+      
+      "x": {
+        "field": "days",
+        "type": "quantitative",
+        "title": "Forecast (days ahead)"        
+      },
+      
+      "y": {
+        "field": "croyde_high",
+        "type": "quantitative",
+        "title": null,
+        "scale": {"domain": [0, 12]},
+        "grid":null
+      },
+
+      "y2": {
+        "field": "croyde_low",
+        "type": "quantitative",
+        "title": null,
+        "grid":null
+      }
+    }
+  }

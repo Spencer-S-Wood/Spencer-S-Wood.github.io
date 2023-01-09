@@ -1,0 +1,53 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "Premier League greatest ever goalscorers ",
+      "subtitle":"Source: Premier League Online",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+
+      "background": "whitesmoke",
+  
+  "data":{"values":[{"Player": "Alan Shearer", "Nationality": "England", "Stat": 260}, {"Player": "Wayne Rooney", "Nationality": "England", "Stat": 208}, {"Player": "Harry Kane", "Nationality": "England", "Stat": 198}, {"Player": "Andrew Cole", "Nationality": "England", "Stat": 187}, {"Player": "Sergio Aguero", "Nationality": "Argentina", "Stat": 184}, {"Player": "Frank Lampard", "Nationality": "England", "Stat": 177}, {"Player": "Thierry Henry", "Nationality": "France", "Stat": 175}, {"Player": "Robbie Fowler", "Nationality": "England", "Stat": 163}, {"Player": "Jermain Defoe", "Nationality": "England", "Stat": 162}, {"Player": "Michael Owen", "Nationality": "England", "Stat": 150}, {"Player": "Les Ferdinand", "Nationality": "England", "Stat": 149}, {"Player": "Teddy Sheringham", "Nationality": "England", "Stat": 146}, {"Player": "Robin van Persie", "Nationality": "Netherlands", "Stat": 144}, {"Player": "Jamie Vardy", "Nationality": "England", "Stat": 134}, {"Player": "Jimmy Floyd Hasselbaink", "Nationality": "Netherlands", "Stat": 127}, {"Player": "Mohamed Salah", "Nationality": "Egypt", "Stat": 127}, {"Player": "Robbie Keane", "Nationality": "Ireland", "Stat": 126}, {"Player": "Nicolas Anelka", "Nationality": "France", "Stat": 125}, {"Player": "Dwight Yorke", "Nationality": "Trinidad & Tobago", "Stat": 123}, {"Player": "Romelu Lukaku", "Nationality": "Belgium", "Stat": 121}]},
+  "height": 300,
+  "width": 260,
+
+  "mark": {
+    "type": "bar",
+    "color": "#6B5B95"},
+    
+
+"encoding": {
+     "x": {
+       "field": "Stat",
+       "title": "Goals",
+       "type": "quantitative",
+       
+       
+       "axis": {
+       
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 0}},
+
+      "y": {
+        "field": "Player",
+        "sort": null,
+        
+        "type": "nominal",
+        "title": "",
+        "axis": {"grid": false}},
+
+                   "tooltip":[
+    {"field":"Player", "title":null},
+    {"field":"Nationality", "title":"Nationality", "type": "nominal"},
+    {"field":"Stat", "title":"Goals", "type": "quantitative"}
+
+
+  ]
+        
+        
+}
+}

@@ -1,0 +1,83 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Number of Citizens for every Hosipital",
+
+  "title": {
+    "text": "Access to Health Care and Life Expectancy",
+    "subtitle":"Number of citizens for every hosipital, Sources: WHO, Worldometres, Lancet Medical Journal",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":9,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "background": "ghostwhite",
+
+  "data": {"url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/AfricanHealthcareFinal%20(2).csv"},
+
+   
+  "height": 300,
+  "width": 300,
+
+"layer":[{
+
+  "mark": {
+    "type":"circle",
+  
+    "size":100},
+ 
+
+  "encoding": {
+
+
+       "tooltip":[
+      {"field":"Country", "title":null},
+      {"field":"People Per Hospital", "title":"People per Hospital", "type": "quantitative", "format":",.0f"},
+      {"field":"Population", "type": "quantitative", "format":",.0f"},
+      {"field":"Hospitals", "title":"No. of Hospitals", "type":"quantitative"}
+      
+
+    ],
+
+    "x": {
+      "field": "People Per Hospital", 
+      "type": "quantitative",
+      "scale": {"domain": [30000, 700000]},
+      "title" :null
+      },
+
+    "y": {
+      "field": "Life Expectancy", 
+      "type": "quantitative",
+      "scale": {"domain": [50, 75]},
+      "title": "Life Expectancy"
+      },
+
+ 
+
+
+    "color": {"field": "Region", "type": "nominal",
+       "scale": {
+        "domain": ["ex-British Colony", "ex-French Colony", "Other"],
+        "range": ["#F44336", "#3F51B5", ""]},
+        "legend": { "orient": "bottom-right",
+         "offset": 10
+        }
+
+  }
+        }
+  },
+
+    {
+      "mark": {"type": "line", "color": ""},
+
+      "transform": [{"regression": "People Per Hospital", "on": "Life Expectancy"}],
+         
+      "encoding": {
+        "x": {"field": "People Per Hospital", "type": "quantitative"},
+        "y": {"field": "Life Expectancy", "type": "quantitative"}
+      }
+    }
+]
+
+}

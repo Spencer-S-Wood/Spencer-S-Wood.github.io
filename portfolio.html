@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nataly Tsangarides</title>
+
+    <link rel="stylesheet" href= "portfolio.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+
+        <!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    
+    <!--Favicon-->
+<link rel="icon" href="icon.png">
+
+
+
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  margin: 0;
+  text-align: center !important;
+}
+
+</style>
+
+<div id="loader">
+  <div id="one"></div>
+  <div id="two"></div>
+</div>
+
+<div id="loadermessage">Loading...</div>
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("loadermessage").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+
+
+
+<body>
+ 
+
+<div style="margin-top:-10px;text-align:center !important;padding:1px 16px;">
+
+ <header>
+ 
+  <container>
+
+    <container class="hcontainer">
+
+  <h1>Data<span style="color: green">Science</span></h1></span>
+
+  <h2><b>Spencer Wood</b> </h2>
+
+  <p>
+    <a class="button" href="index.html"><i class="fas fa-home faa-home animated-hover fa-4x" style="font-size: 1em;"></i> Home</a>  
+    <a class="buttonActive" href="portfolio.html"><i class="fas fa-chart-bar"></i> Portfolio</a>
+    <a class="button" href="project.html"><i class="fas fa-edit faa-edit animated-hover fa-4x" style="font-size: 1em;"></i> Project</a> 
+    <a class="button" href="https://github.com/NatalyTsangarides/NatalyTsangarides.github.io"><i class="fab fa-github faa-github animated-hover fa-4x" style="font-size: 1em;"></i> Github</a> 
+    <a class="button" href="https://rapidcharts.io/datascience"><i class="fas fa-book faa-book animated-hover fa-4x" style="font-size: 1em;"></i> Course</a>
+  </p>
+
+</container>
+</header>
+
+<container>
+
+  <container class="hcontainer">
+
+
+  <p class="bodyText"><span style="color: #02354D; font-weight: 700; font-size:25px;">WEEK 1 - Setting up web page, and embedding two charts</p>
+
+ 
+
+  <p>This chart track surf forecasts  for Croyde Bay, one of the best surfsports in the in UK</p>
+
+<!--CHART 1-->
+<div class="chart" id="Chart1">
+<script>
+  var myChart1 = "Surf ForeCast.json";
+  vegaEmbed('#Chart1', myChart1);
+</script>
+</div>
+
+<h3>Inflation</h3>
+
+<p>The chart looks at inflation in the UK.</p>
+
+<!--CHART 2 -->
+<div class="chart" id="Chart2">
+<script>
+  var myChart2 = "Prices.json";
+  vegaEmbed('#Chart2', myChart2);
+</script>
+</div>
+
+</container>
+
+<container>
+
+  <container class="hcontainer">
+
+<p class="bodyText"><span style="color: #02354D; font-weight: 700;font-size:25px;">Week 2: Data can be deceptive.....</p>
+
+
+  <h3>UK Coronavirus Data Charts</h3>
+
+<p>The chart shows total IMF lending (1984-2022)</p>
+
+
+<div class="chart" id="Chart4">
+<script>
+  var myChart4 = "IMFlending.json";
+  vegaEmbed('#Chart4', myChart4);
+</script>
+  </div> 
+
+  <p>The chart shows IMF lending as a % of World GDP (1984-2022)</p>
+
+  <div class="chart" id="Chart5">
+<script>
+  var myChart5 = "IMFlendingadjusted.json";
+  vegaEmbed('#Chart5', myChart5);
+</script>
+</div> 
+
+
+</container>
+
+
+  <container>
+
+    <container class="hcontainer">
+
+<p class="bodyText"><span style="color: #02354D; font-weight: 700;font-size:25px;">Week 3: Defining Data Source in line</p>
+
+   <h3>Where have all the babies gone?</h3>
+
+  <p>The chart shows fertility rates for some countries with concerning fertility trends</p>
+
+  <!-- Crypto Chart: In-line JSON data -->
+<div class="chart" id="Chart6">
+<script>
+  var myChart6 = "Portfolio3V1.json";
+  vegaEmbed('#Chart6', myChart6);
+</script>
+</div>
+
+
+  <p>The chart uses a color encoding rather than a facet so that all lines are presented on the same grid. This makes cross country comparisons easier.</p>
+
+<!-- Crypto Chart: Data from CSV, updated manually -->
+<div class="chart" id="Chart7">
+<script>
+  var myChart7 = "Portfolio3V2.json";
+  vegaEmbed('#Chart7', myChart7);
+</script>
+</div>
+
+    </container>
+
+    <container>
+
+      <container class="hcontainer">
+
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 4: Scraping Data</p>
+
+  <h3> Will Kane catch Shearer?</h3>
+
+   <!--FRED API issue resolved by using a CORS reverse proxy-->
+
+  <p>This chart uses data scarper from the premier league website.</p>
+
+
+<div class="chart" id="Chart8">
+<script>
+  var myChart8 = "Portfolio4.json";
+  vegaEmbed('#Chart8', myChart8);
+</script>
+</div>
+
+
+
+        </container>
+
+        <container>
+
+          <container class="hcontainer">
+
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 5: Dashboard of Charts</p>
+
+   <h3>9 charts on Unemployment in the UK</h3>
+
+ <p> The colab notebook can be found <a href="https://colab.research.google.com/drive/1veIlL7crqfK76uaUFV1DSPUzLT32ctTB?usp=sharing">here</a></p>
+
+
+  <!-- Education chart raw, FRED -->
+<div class="chart" id="Chart31">
+<script>
+  var myChart10 = "charteducation.json";
+  vegaEmbed('#Chart31', myChart31);
+</script>
+</div>
+
+  <!-- Race chart raw, FRED -->
+<div class="chart" id="Chart32">
+<script>
+  var myChart11 = "chartrace.json";
+  vegaEmbed('#Chart32', myChart32);
+</script>
+</div>
+
+   <!-- Women chart raw, FRED -->
+<div class="chart" id="Chart33">
+<script>
+  var myChart12 = "chartwomen.json";
+  vegaEmbed('#Chart33', myChart33);
+</script>
+</div>
+
+  <!-- Income chart raw, FRED -->
+<div class="chart" id="Chart34">
+<script>
+  var myChart13 = "chartincome.json";
+  vegaEmbed('#Chart34', myChart34);
+</script>
+</div>
+          </container>
+
+          <container>
+
+            <container class="hcontainer">
+
+
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 7: Maps</p>
+
+  <h3>Map of Africa</h3>
+
+   <p>The chart was made by scraping data from Wikipedia, using python pandas. The colab notebook can be found 
+   <a href="https://colab.research.google.com/drive/1B7lbt7UPaiZfDueZCE3lY0jaBMTC4Q5H?usp=sharing">here</a></p>
+
+   <!-- Education, wiki -->
+<div class="chart" id="Chart14">
+<script>
+  var myChart14 = "AfricaChloropleth.json";
+  vegaEmbed('#Chart14', myChart14);
+</script>
+</div>
+
+<div class="chart" id="Chart15">
+    <script>
+      var myChart14 = "Africa BaseMap.json";
+      vegaEmbed('#Chart15', myChart15);
+    </script>
+    </div>
+
+
+
+            </container>
+
+            <container>
+
+              <container class="hcontainer">
+
+     <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 8: Data Stories</p>
+
+  <h3>Female-led countries handled coronavirus better</h3>
+
+  <p>This is my chart inspired by Sarah Smith's argument that "Female leaders have handled coronavirus better", during the "An unfair crisis" talk. The chart compares 
+    'nearest neighbour' countries to offset the small sample size, pairing countries with similar characteristics such as population. It is clear that, the argument is valid as 
+    female-led countries have significantly lower death tolls. This difference could be explained by their risk aversion with regards to life and their willingness to
+     take risks in the domain of the economy.</p>
+
+   <!-- Covid Deaths, JHU -->
+<div class="chart" id="Chart37">
+<script>
+  var myChart15 = "femaleleader.json";
+  vegaEmbed('#Chart37', myChart37);
+</script>
+</div>
+  </container>
+
+  <container>
+
+  <container class="hcontainer">
+
+
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 9: Advanced Analytics</p>
+
+  <h3>Fox News and Republican Voting</h3>
+
+  <p>Linear Regression chart, using raw data from two sources</p>
+
+   <!-- Fox News -->
+<div class="chart" id="Chart38">
+<script>
+  var myChart16 = "foxnewsregression.json";
+  vegaEmbed('#Chart38', myChart38);
+</script>
+</div>
+   </container> 
+    <container>
+
+  <container class="hcontainer">
+
+  
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 10: Interactivity</p>
+    
+  <h3>Real Median Household Income in the US</h3>
+
+  <p>The chart includes an interactive selector for a specific time period and a tooltip. The chart was made using six different APIs</p>
+
+   <!-- Income -->
+<div class="chart" id="Chart39">
+<script>
+  var myChart17 = "stateincomefred.json";
+  vegaEmbed('#Chart39', myChart39);
+</script>
+</div>
+
+<h3>Average Annual Wage in the US</h3>
+
+  <p>The chart includes an interactive selector for the countries and a tooltip</p>
+
+   <!-- Wage -->
+<div class="chart" id="Chart40">
+<script>
+  var myChart18 = "wage.json";
+  vegaEmbed('#Chart41', myChart41);
+</script>
+</div>      
+
+    </container> 
+
+
+</div> 
+  
+</body>
+</div>
+
+
+</html>

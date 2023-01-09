@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "title": {
+      "text": "Growth Rates since Estonia's Tech Revolution",
+      "subtitle":"GDP growth rate 2000-2020 %, Source: World Bank",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+
+      "background": "whitesmoke",
+  
+    
+    "data": {
+      "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/growth.csv",
+      "format": {"type": "csv"}
+    },
+   
+    "height": 250,
+    "width": 500,
+   
+    "mark": {
+      "type": "line",
+      "interpolate": "step-after"
+    },
+    
+    "encoding": {
+      
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}},
+   
+      "y": {
+        "field": "GDPgrowth",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}},
+  
+      "color": {
+        "field": "Country Name",
+        "type": "nominal",
+        "scale": {"scheme": "set1"},
+        "title": null,
+        "legend": {"orient": "bottom-left"}
+   
+     }
+  }
+  }

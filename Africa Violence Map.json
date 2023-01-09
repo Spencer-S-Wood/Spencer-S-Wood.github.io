@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 500,
+
+   "title": {
+    "text": "Danger Zones",
+    "fontSize": 18,
+    "subtitle":["Instances of social unrest which resulted in more than 5 Fatalities, Source: SIE centre"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10, "anchor": "start"
+  },
+
+  "background": "ghostwhite",
+
+  "layer" : [ 
+   { 
+    "data": {
+     "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/GeoAfrica.json",
+    "format": {"property": "features"}
+  },
+  "projection": {"type": "azimuthalEquidistant"},
+  "mark": {
+    "type": "geoshape",
+    "stroke": "black",
+    "fill": "floralwhite",
+    "strokeWidth": 0.5},
+    "encoding": {"tooltip": {"field": "properties.name", "type": "nominal"}}
+    },
+
+
+ {
+    "data": {
+      "url": "https://raw.githubusercontent.com/Spencer-S-Wood/Spencer-S-Wood.github.io/main/conflictlocationdataclean.csv"
+    },
+
+
+
+    "projection": {
+      "type": "azimuthalEquidistant"
+    },
+    "mark": { "type": "circle", "color":"red", "opacity": 0.6},
+    "encoding": {
+      "longitude":{
+        "field": "longitude",
+        "type": "quantitative"
+      },
+      "latitude": {
+        "field": "latitude",
+        "type": "quantitative"
+    },
+       "size": {
+        "legend": null,
+        "field": "ndeath",
+        
+        "type": "quantitative",
+        "scale": {
+          "type": "linear",
+          "domain": [5, 1000],
+          "range": [5, 300]
+        }},
+        "color": { "field": "Region", "type": "nominal",
+        "scale": {
+               "domain": ["French Africa", "British Africa", "Other"],
+               "range": ["#3F51B5","#F44336", "grey"]},
+               "title": "Conflict Location"},
+                   "tooltip":[
+    {"field":"countryname", "title":"Country"},
+    {"field":"startdate", "title":"Start Date", "type": "temporal"},
+    {"field":"duration", "title":"Duration(Days)", "type": "quantitative"},
+    {"field":"elocal", "title":"Location", "type":"nominal"},
+    {"field":"ndeath", "title":"Fatalities", "type":"nominal"}
+
+  ]
+               }
+    
+        
+  }]}
