@@ -4,7 +4,7 @@
 
   "title": {
   "text": "Economic Performance",
-  "subtitle": "GDP per Capita (Current $US) ex-French colonies in Blue",
+  "subtitle": "GDP per Capita (Current $US) ex French colonies in blue",
   "subtitleFontStyle":"italic",
   "subtitleFontSize":10,
   "anchor": "start",
