@@ -1,0 +1,234 @@
+body {
+   margin: 0;
+   padding: 0;
+   min-height: 100vh;
+   background-color:ghostwhite;
+   font-family: 'Comic Sans MS', cursive;
+}
+
+h1{
+    position: relative;
+    left: 100px;
+    color:  black;
+    font-family: 'Comic Sans MS', cursive !important;
+    margin-left: 20px !important;
+    font-size: 60px !important;
+    margin-top: 0px;
+    font-weight: bold !important;
+  }
+  
+ h2{
+    
+   color:  black;
+   margin-top: 100px !important;
+   font-size: 18px !important;
+   font-family: 'Montseratt', cursive !important;
+   margin-left: -200px !important;
+ }
+
+
+body, .nav, .menu, .smenu, .sectional_nav{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.sectional_nav{
+   position:fixed;
+   margin-bottom: -170px;
+   background-color: rgb(249, 246, 238);
+   padding: 5px;
+   transition: 0.5s;
+   border-radius: 50px;
+   overflow: hidden;
+   box-shadow: 0 8px 15px rgba(161, 121, 121, 0.2);
+}
+
+.sectional_nav input:checked ~ .smenu {
+   width: 400px;
+   height: 30px;
+   padding-right: 20px;
+}
+
+.sectional_nav input {
+   width: 20px;
+   height: 20px;
+   opacity: 0;
+}
+
+.sectional_nav span {
+   position: absolute;
+   border-radius: 50;
+   background-color: rgb(12, 1, 1);
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.smenu {
+   margin: 0;
+   padding: 0;
+   width: 0;
+   overflow: hidden;
+   transition: 0.5s;
+}
+
+.smenu li {
+   list-style: none;
+   margin: 0 10px;
+}
+
+.smenu li a {
+   text-decoration: none;
+   color: black;
+   text-transform: capitalize;
+   font-weight: 600;
+   transition: 0.5s;
+}
+
+.sectional_nav input {
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   opacity: 0;
+}
+
+.sectional_nav input:checked ~ span {
+   background-color: #02354D !important;
+}
+
+.sectional_nav span:nth-child(2) {
+   transform: translateY(-8px);
+}
+
+
+.sectional_nav input:checked ~ span:nth-child(2) {
+   transform: translateY(0) rotate(-45deg);
+   display: none;
+}
+.sectional_nav span:nth-child(3) {
+   transform: translateY(8px);
+}
+
+.sectional_nav input:checked ~ span:nth-child(3) {
+   transform: translateY(0) rotate(45deg);
+   display: none;
+}
+
+
+.sectional_nav input:checked ~ span:nth-child(4) {
+   transform: translateY(0) rotate(-45deg);
+   display: none;
+}
+
+.nav {
+
+
+   background-image: url('icon.png');
+    
+   position: relative;
+   background-color: rgb(255, 255, 255);
+
+   right: -30px;
+   padding: 20px;
+   transition: 0.5s;
+   border-radius: 50px;
+   overflow: hidden;
+   box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.menu {
+   margin: 0;
+   padding: 0;
+   width: 0;
+   overflow: hidden;
+   transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+   width: 400px;
+}
+
+.menu li {
+   list-style: none;
+   margin: 0 10px;
+}
+
+.menu li a {
+   text-decoration: none;
+   color: #02354D;
+   text-transform: capitalize;
+   font-weight: 600;
+   transition: 0.5s;
+}
+
+.menu li a:hover {
+   color: rgb(30,144,255);
+}
+
+.nav input {
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   opacity: 0;
+}
+
+.lines {
+   width: 25px;
+   height: 3px;
+   background: #596778;
+   display: block;
+   position: relative;
+   top: 50%;
+   left: 30%;
+}
+
+.nav span {
+   position: absolute;
+   left: 30px;
+   width: 30px;
+   height: 4px;
+   border-radius: 50px;
+   background-color: rgb(14, 1, 1);
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+   background-color: #596778;
+}
+
+.nav span:nth-child(2) {
+   transform: translateY(-8px);
+}
+
+
+.nav input:checked ~ span:nth-child(2) {
+   transform: translateY(0) rotate(-45deg);
+}
+.nav span:nth-child(3) {
+   transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+   transform: translateY(0) rotate(45deg);
+}
+
+.nav input:checked ~ span:nth-child(4) {
+   transform: translateY(0) rotate(-45deg) !important;
+   display: none;
+}
+
+@media only screen
+and (max-device-width : 800px) { 
+
+.nav {display: none !important;}
+
+}
+
+@media only screen
+and (min-device-width : 800px) { 
+
+.sectional_nav {display: none !important;}
+
+}
